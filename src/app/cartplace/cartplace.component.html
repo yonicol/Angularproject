@@ -1,0 +1,16 @@
+<header></header>
+<div>
+    <h1>This is your cart</h1>
+    <p>Here you can view and place your order</p>
+    <p *ngIf="cartempty">Your cart is empty, go back to the <a href="http://localhost:4200/userarea">store</a> to add items.</p>
+    <div *ngIf="!cartempty">
+        <div *ngFor="let product of cartproducts" class="productdiv">
+            <span>{{product.this.title}}</span>
+            <span>Price: {{product.this.priceperkg}}</span>
+            <img src="{{product.this.image}}" /><br/>
+            <label>How many?<input type="number" value={{product.counter}} disabled #counter/></label>
+            <button (click)="removefromCart(product.this.title, product.counter)">Remove from cart</button>
+        </div>
+        <p>The total cart price is: {{sum | currency:'ILS'}}</p>
+    </div>
+</div>

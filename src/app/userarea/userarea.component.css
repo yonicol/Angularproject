@@ -1,0 +1,29 @@
+div{
+    text-align: center;
+}
+span{
+    display: block;
+}
+.productdiv{
+    text-align: center;
+    display: inline-block;
+    border: black solid 2px;
+    padding: 5px;
+    margin: 10px;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+input{
+    width: 50px;
+    display: block;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+}
+.headername{
+    display: inline-block;
+}

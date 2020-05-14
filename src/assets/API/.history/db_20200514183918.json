@@ -1,0 +1,124 @@
+{
+  "connection": [
+    "succesfull"
+  ],
+  "category": [
+    "All", "Vegetables", "Fruits", "Milk and cheeses", "Frozen"
+  ],
+  "products": [
+    {
+      "title": "Tomato",
+      "priceperkg": "4",
+      "category": "vegetables",
+      "image": "https://media.istockphoto.com/photos/tomato-isolated-on-white-background-picture-id466175630?k=6&m=466175630&s=612x612&w=0&h=fu_mQBjGJZIliOWwCR0Vf2myRvKWyQDsymxEIi8tZ38="
+    },
+    {
+      "title": "Cuecumber",
+      "priceperkg": "4",
+      "category": "vegetables",
+      "image": "https://www.greefa.com/wp-content/uploads/2016/05/web750px_0006_komkommer.png"
+    },
+    {
+      "title": "red onion",
+      "priceperkg": "3",
+      "category": "vegetables",
+      "image": "https://produits.bienmanger.com/36700-0w470h470_Organic_Red_Onion_From_Italy.jpg"
+    },
+    {
+      "title": "white onion",
+      "priceperkg": "3",
+      "category": "vegetables",
+      "image": "https://images.heb.com/is/image/HEBGrocery/001180528"
+    },
+    {
+      "title": "lettece",
+      "priceperkg": "4",
+      "category": "vegetables",
+      "image": "https://thecaribbeanglobe.com/wp-content/uploads/2018/11/ecolitainted.jpg"
+    },
+    {
+      "title": "apple",
+      "priceperkg": "5",
+      "category": "fruits",
+      "image": "https://www.camoni.co.il/webfiles/images/cache/782X426/zcX1/webfiles/camoni/cms_files/headers/header_208797.jpg"
+    },
+    {
+      "title": "banana",
+      "priceperkg": "7",
+      "category": "fruits",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61fZ%2BYAYGaL._SX425_.jpg"
+    },
+    {
+      "title": "peach",
+      "priceperkg": "6",
+      "category": "fruits",
+      "image": "https://previews.123rf.com/images/utima/utima1604/utima160400038/54837747-peach-with-leaf-isolated-on-white.jpg"
+    },
+    {
+      "title": "strawberry",
+      "priceperkg": "8",
+      "category": "fruits",
+      "image": "https://k6s3v6r4.ssl.hwcdn.net/pictures/878/878972.jpg"
+    },
+    {
+      "title": "pear",
+      "priceperkg": "5",
+      "category": "fruits",
+      "image": "https://www.producemarketguide.com/sites/default/files/Commodities.tar/Commodities/pears_commodity-page.png"
+    },
+    {
+      "title": "milk 3%",
+      "priceperkg": "3",
+      "category": "milk and cheeses",
+      "image": "https://www.tara.co.il/wp-content/uploads/2018/01/milk_3-1.png"
+    },
+    {
+      "title": "yellow cheese",
+      "priceperkg": "5",
+      "category": "milk and cheeses",
+      "image": "https://www.toprechesh.co.il/files/products/image1_3952_2019-12-15_00-59-24.jpg"
+    },
+    {
+      "title": "white cheese",
+      "priceperkg": "5",
+      "category": "milk and cheeses",
+      "image": "https://www.tnuva.co.il/uploads/f_5d009cd331bce_1560321235.jpg"
+    },
+    {
+      "title": "fries",
+      "priceperkg": "10",
+      "category": "frozen",
+      "image": "https://www.ynet.co.il/PicServer5/2018/11/11/8874640/88746350100892640360no.jpg"
+    },
+    {
+      "title": "salmon",
+      "priceperkg": "20",
+      "category": "frozen",
+      "image": "https://img.mako.co.il/2009/12/23/salmonc.jpg"
+    },
+    {
+      "title": "pizza pastry",
+      "priceperkg": "12",
+      "category": "frozen",
+      "image": "https://www.hallmarknet.co.il/wp-content/uploads/2019/01/20190111_013024.jpg"
+    },
+    {
+      "title": "cheese pastry",
+      "priceperkg": "10",
+      "category": "frozen",
+      "image": "https://www.hallmarknet.co.il/wp-content/uploads/2019/01/20190109_233042.jpg"
+    },
+    {
+      "title": "coutage",
+      "priceperkg": "7",
+      "category": "milk and cheeses",
+      "image": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/UCS28_L_P_4127077_1.png"
+    },
+    {
+      "title": "coutage",
+      "priceperkg": "7",
+      "category": "milk and cheeses",
+      "image": "https://www.hallmarknet.co.il/wp-content/uploads/2019/01/20190109_233042.jpg"
+    },
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "connection": [
+    "succesfull"
+  ],
+  "products": [
+    {
+      "title": "Tomato",
+      "price": "4"
+    }
+  ]
+}

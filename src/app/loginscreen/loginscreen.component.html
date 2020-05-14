@@ -1,0 +1,22 @@
+<div>
+<h1>Login page</h1>
+<p>Hello users, you can either login with google or by regular username and password.<br>In order to login with username and password you will need to sign up.</p>
+<img src="../../assets/loginWithGoogle.png" (click)="loginwithGoogle()"/>
+<button (click)="loginForm()">Login</button>
+<button (click)="Signup()">Sign up</button>
+<form *ngIf="showloginform" [formGroup]="Loginform" (ngSubmit)="Login()">
+    <label>Username:<br><input type="text" formControlName="username" [(ngModel)]="tempusername" required/></label>
+    <p *ngIf="!Loginform.controls.username.valid && Loginform.controls.username.touched">You need to have a username.</p>
+    <label>Password:<br><input type="password" formControlName="password" [(ngModel)]="temppassword" required/></label>
+    <p *ngIf="!Loginform.controls.password.valid && Loginform.controls.password.touched">You need to have a password.</p>
+    <button [disabled]="!Loginform.valid">Login</button>
+    <button (click)="showforgotpassword()">Forgot password</button>
+</form>
+<div #forgotpass *ngIf="forgotpass">
+    <p>You can reset your password here:</p>
+    <label>Enter username to reset password: <input type="text" #usernameforgotpass required /></label>
+    <label>Enter new password: <input type="password" #passwordforgotpass required /></label>
+    <button (click)="forgotPassword(usernameforgotpass.value, passwordforgotpass.value)">Reset password</button>
+    <p *ngIf="usernamedoesntexist">Username doesnt exist in our system.</p>
+</div>
+</div>

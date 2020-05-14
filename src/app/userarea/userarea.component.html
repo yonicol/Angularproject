@@ -1,0 +1,26 @@
+<header><p>hello <span *ngIf="logedwithGoogle" class="headername">{{username.displayname}}</span><span *ngIf="!logedwithGoogle" class="headername">{{username}}</span></p><button (click)="gotoCart()">Cart</button>    <button (click)="logout()">Logout</button></header>
+<div>
+    <h1>Welcome to the store</h1>
+    <p>Here you can select online what you need and want to buy!</p>
+    <label>Select by category: <select #search (change)="searchbyCategory(search.value)">
+            <option *ngFor="let category of categorys" value="{{category}}">{{category}}</option>
+        </select></label><br />
+    <div *ngIf="!showsearch" class="container">
+        <div *ngFor="let product of storeproducts" class="productdiv">
+            <span>{{product.title}}</span>
+            <span>Price: {{product.priceperkg | currency:'ILS'}}</span>
+            <img src="{{product.image}}" /><br/>
+            <label>How many?<input type="number" step="1" value="0" min="0" #counter/></label>
+            <button (click)="addtoCart(product.title, counter.value)">Add to cart</button>
+        </div>
+    </div>
+    <div *ngIf="showsearch" class="container">
+        <div *ngFor="let product of searchproducts" class="productdiv">
+            <span>{{product.title}}</span>
+            <span>Price: {{product.priceperkg | currency:'ILS'}}</span>
+            <img src="{{product.image}}" /><br/>
+            <label>How many?<input type="number" step="1" value="1" min="1" #counter/></label>
+            <button (click)="addtoCart(product.title, counter.value)">Add to cart</button>
+        </div>
+    </div>
+</div>
