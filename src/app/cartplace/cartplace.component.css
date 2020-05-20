@@ -3,13 +3,18 @@ div{
 }
 span{
     display: block;
+    color: white;
+}
+p{
+    margin: 0;
 }
 .productdiv{
     text-align: center;
     display: inline-block;
     border: black solid 2px;
-    height: 200px;
+    height: 220px;
     width: 150px;
+    margin: 20px;
 }
 img{
     height: 100px;
@@ -17,5 +22,41 @@ img{
 }
 input{
     width: 50px;
+    margin: 5px auto;
     display: block;
+}
+.headername{
+    display: inline-block;
+}
+header{
+    padding-top: 30px;
+}
+.logoutbutton{
+    padding: 5px 15px 5px 15px;
+    background-color: red;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+.logoutbutton:hover{
+    border: black solid 1px;
+}
+.gradient {
+    width: 100%;
+    height: 100vh;
+    background-image:
+      linear-gradient(
+          to right,
+        blue, red
+      );
+  }
+  .storebutton{
+    padding: 5px 15px 5px 15px;
+    background-color: blue;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+.storebutton:hover{
+    border: black solid 1px;
 }

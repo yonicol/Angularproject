@@ -1,5 +1,5 @@
-<header><p>hello <span *ngIf="logedwithGoogle" class="headername">{{username.displayname}}</span><span *ngIf="!logedwithGoogle" class="headername">{{username}}</span></p><button (click)="gotoCart()">Cart</button>    <button (click)="logout()">Logout</button></header>
-<div>
+<div class="gradient">
+    <header><p>Hello <span *ngIf="logedwithGoogle" class="headername">{{username}}</span><span *ngIf="!logedwithGoogle" class="headername">{{username}}</span></p><button (click)="gotoCart()" class="cartbutton">Cart</button><button (click)="logout()" class="logoutbutton">Logout</button></header>
     <h1>Welcome to the store</h1>
     <p>Here you can select online what you need and want to buy!</p>
     <label>Select by category: <select #search (change)="searchbyCategory(search.value)">
@@ -11,7 +11,7 @@
             <span>Price: {{product.priceperkg | currency:'ILS'}}</span>
             <img src="{{product.image}}" /><br/>
             <label>How many?<input type="number" step="1" value="0" min="0" #counter/></label>
-            <button (click)="addtoCart(product.title, counter.value)">Add to cart</button>
+            <button (click)="addtoCart(product.title, counter.value)" class="addbutton">Add to cart</button>
         </div>
     </div>
     <div *ngIf="showsearch" class="container">
@@ -20,7 +20,7 @@
             <span>Price: {{product.priceperkg | currency:'ILS'}}</span>
             <img src="{{product.image}}" /><br/>
             <label>How many?<input type="number" step="1" value="1" min="1" #counter/></label>
-            <button (click)="addtoCart(product.title, counter.value)">Add to cart</button>
+            <button (click)="addtoCart(product.title, counter.value)" class="addbutton">Add to cart</button>
         </div>
     </div>
 </div>

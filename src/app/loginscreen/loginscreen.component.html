@@ -1,9 +1,9 @@
-<div>
+<div class="style">
 <h1>Login page</h1>
-<p>Hello users, you can either login with google or by regular username and password.<br>In order to login with username and password you will need to sign up.</p>
-<img src="../../assets/loginWithGoogle.png" (click)="loginwithGoogle()"/>
-<button (click)="loginForm()">Login</button>
-<button (click)="Signup()">Sign up</button>
+<p>Hello users, you can either login with google or by regular username and password.<br>In order to login with username and password you will need to sign up first.</p>
+<img src="../../assets/loginWithGoogle.png" (click)="loginwithGoogle()" class="googlebutton"/><br/>
+<button (click)="loginForm()" class="loginbutton">Login</button>
+<button (click)="Signup()" class="signupbutton">Sign up</button>
 <form *ngIf="showloginform" [formGroup]="Loginform" (ngSubmit)="Login()">
     <label>Username:<br><input type="text" formControlName="username" [(ngModel)]="tempusername" required/></label>
     <p *ngIf="!Loginform.controls.username.valid && Loginform.controls.username.touched">You need to have a username.</p>

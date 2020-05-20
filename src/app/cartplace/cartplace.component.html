@@ -1,5 +1,5 @@
-<header></header>
-<div>
+<div class="gradient">
+    <header><p>Hello <span *ngIf="logedwithGoogle" class="headername">{{username}}</span><span *ngIf="!logedwithGoogle" class="headername">{{username}}</span></p><button (click)="gotoStore()" class="storebutton">Store</button><button (click)="logout()" class="logoutbutton">Logout</button></header>
     <h1>This is your cart</h1>
     <p>Here you can view and place your order</p>
     <p *ngIf="cartempty">Your cart is empty, go back to the <a href="http://localhost:4200/userarea">store</a> to add items.</p>

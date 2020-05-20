@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { UserauthService } from '../userauth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-cartplace',
@@ -10,15 +11,34 @@ import { UserauthService } from '../userauth.service';
 })
 export class CartplaceComponent implements OnInit {
 
-  constructor(private router:Router, private apiconnect: HttpClient, private auth: UserauthService) { }
+  constructor(private router:Router, private apiconnect: HttpClient, private auth: UserauthService, private firebaseauth: AngularFireAuth) { }
   cartempty:boolean = true;
   storeproducts:any;
   cartproducts:any[] = [];
   sum:number = 0;
+  username;
+  logedwithGoogle: boolean;
   ngOnInit(): void {
+    this.logedwithGoogle = this.auth.userLoginwithGoogle();
+    this.getUsername();
     this.getProducts();
     this.getCart();
     this.calculateSum();
+  }
+  getUsername(): void {
+    if (this.logedwithGoogle || sessionStorage.getItem("logingoogle") == 'true') {
+      if(this.logedwithGoogle){
+        this.username = this.firebaseauth.authState.subscribe(data => { this.username = data.displayName;
+          sessionStorage.setItem('googleusername', data.displayName); })
+      }
+      else{
+        this.logedwithGoogle = true;
+        this.username = sessionStorage.getItem('googleusername')
+      }
+    }
+    else {
+      this.username = sessionStorage.getItem("username");
+    }
   }
   calculateSum():void{
     this.sum = 0;
@@ -65,5 +85,8 @@ export class CartplaceComponent implements OnInit {
         return;
       }
     }
+  }
+  gotoStore(){
+    this.router.navigate(['/userarea'])
   }
 }

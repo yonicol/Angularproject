@@ -13,7 +13,7 @@ export class UserconnectedGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (!this.userAuth.userLoginwithGoogle()) {
+    if (this.userAuth.userLoginwithGoogle()==false) {
       if (this.userAuth.userStatus()) {
         return true;
       }

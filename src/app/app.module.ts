@@ -12,7 +12,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HttpClientModule } from '@angular/common/http';
-import { CoinfixerComponent } from './coinfixer/coinfixer.component';
 import { CartplaceComponent } from './cartplace/cartplace.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { CartplaceComponent } from './cartplace/cartplace.component';
     LoginscreenComponent,
     RegisteruserComponent,
     UserareaComponent,
-    CoinfixerComponent,
     CartplaceComponent
   ],
   imports: [

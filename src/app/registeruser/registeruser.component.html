@@ -1,14 +1,15 @@
 <div class="order">
     <h1>Register as a user</h1>
     <form [formGroup]="signUpform" (ngSubmit)="registerUser()">
-        <label>Username:<br><input type="text" formControlName="username" [(ngModel)]="tempusername" required/></label>
+        <label>Username:<br><input type="text" formControlName="username" [(ngModel)]="tempusername" minlength="4" required/></label>
         <p *ngIf="!signUpform.controls.username.valid && signUpform.controls.username.touched">You need to have a username.</p>
         <p *ngIf="usernametaken">Username is taken.</p>
-        <label>Email:<br><input type="email" formControlName="email" [(ngModel)]="tempemail" required/></label>
+        <label>Email:<br><input type="email" formControlName="email" minlength="4" [(ngModel)]="tempemail" required/></label>
         <p *ngIf="!signUpform.controls.email.valid && signUpform.controls.email.touched">You need to have a email.</p>
         <p *ngIf="emailtaken">Email is taken.</p>
-        <label>Password:<br><input type="password" formControlName="password" [(ngModel)]="temppassword" required/></label>
+        <label>Password:<br><input type="password" formControlName="password" minlength="4" [(ngModel)]="temppassword" required/></label>
         <p *ngIf="!signUpform.controls.password.valid && signUpform.controls.password.touched">You need to have a password.</p>
-        <button [disabled]="!signUpform.valid">Register</button>
+        <button (click)="movetoLogin()" class="loginbutton">Already register? Login</button>
+        <button [disabled]="!signUpform.valid" class="signupbutton">Register</button>
     </form>
 </div>

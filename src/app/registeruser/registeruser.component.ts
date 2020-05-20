@@ -65,4 +65,7 @@ export class RegisteruserComponent implements OnInit {
       this.emailtaken = true;
     }
   }
+  movetoLogin(){
+    this.router.navigate(['/login']);
+  }
 }

@@ -1,8 +1,12 @@
 div{
     text-align: center;
 }
+p{
+    margin: 0;
+}
 span{
     display: block;
+    color: white;
 }
 .productdiv{
     text-align: center;
@@ -17,6 +21,7 @@ img{
 }
 input{
     width: 50px;
+    margin: 5px auto;
     display: block;
 }
 .container{
@@ -26,4 +31,42 @@ input{
 }
 .headername{
     display: inline-block;
+}
+.gradient {
+    width: 100%;
+    background-image:
+      linear-gradient(
+          to right,
+        blue, red
+      );
+  }
+  .logoutbutton{
+    padding: 5px 15px 5px 15px;
+    background-color: red;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+.logoutbutton:hover{
+    border: black solid 1px;
+}
+.cartbutton{
+    padding: 5px 15px 5px 15px;
+    background-color: blue;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+.cartbutton:hover{
+    border: black solid 1px;
+}
+header{
+    padding-top: 30px;
+}
+.addbutton{
+    padding: 5px 15px 5px 15px;
+    background-color: green;
+    border: none;
+    color: white;
+    margin: 10px;
 }

@@ -40,6 +40,7 @@ export class UserauthService {
       this.firebaseauth.auth.signInWithPopup(provider).then(
         data =>{
           this.loggedwithGoogle = true;
+          sessionStorage.setItem("logingoogle", 'true');
           resolve(data);
         },
         err =>{
@@ -51,9 +52,11 @@ export class UserauthService {
   logoutGoogle(){
     return new Promise((resolve,reject)=>{
       if(firebase.auth().currentUser){
+        this.loggedwithGoogle = false;
+        this.userConnected = false;
+        sessionStorage.clear();
         this.firebaseauth.auth.signOut();
         resolve(true);
-        this.loggedwithGoogle = false;
       }
       else{
         reject("User not found");
